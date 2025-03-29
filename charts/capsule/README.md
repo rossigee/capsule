@@ -40,23 +40,20 @@ The following Values have changed key or Value:
 The Capsule Operator requires it's CRDs to be installed before the operator itself. Since the Helm CRD lifecycle has limitations, we recommend to install the CRDs separately. Our chart supports the installation of crds via a dedicated Release.
 The Capsule Operator Chart can be used to instantly deploy the Capsule Operator on your Kubernetes cluster.
 
-1. Add this repository:
+1. Install Capsule:
 
         $ helm repo add projectcapsule https://projectcapsule.github.io/charts
-
-2. Install Capsule:
-
         $ helm install capsule projectcapsule/capsule --version 0.7.0 -n capsule-system --create-namespace
 
         or
 
         $ helm install capsule oci://ghcr.io/projectcapsule/charts/capsule --version 0.7.0  -n capsule-system --create-namespace
 
-3. Show the status:
+2. Show the status:
 
         $ helm status capsule -n capsule-system
 
-4. Upgrade the Chart
+3. Upgrade the Chart
 
         $ helm upgrade capsule projectcapsule/capsule -n capsule-system
 
@@ -64,7 +61,7 @@ The Capsule Operator Chart can be used to instantly deploy the Capsule Operator 
 
         $ helm upgrade capsule oci://ghcr.io/projectcapsule/charts/capsule --version 0.4.7
 
-5. Uninstall the Chart
+4. Uninstall the Chart
 
         $ helm uninstall capsule -n capsule-system
 
